@@ -8,7 +8,7 @@ import BlogDetails from '../Component/BlogDetails';
 const DetailsPage = () => {
 
     let {postID}=useParams()
-    let {details,setDetails}=useState(null)
+    let [details,setDetails]=useState(null)
 
     useEffect(()=>{
         (async()=>{
