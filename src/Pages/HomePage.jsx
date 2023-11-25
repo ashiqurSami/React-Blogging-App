@@ -9,7 +9,6 @@ const HomePage = () => {
     useEffect(()=>{
         (async()=>{
             let res=await postNewest()
-            console.log(res.data)
             setNewestList(res);
         })()
     },[])
