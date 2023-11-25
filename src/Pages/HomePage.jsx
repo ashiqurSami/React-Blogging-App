@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import Layout from './../Layout/Layout';
 import BlogList from '../Component/BlogList';
 import { postNewest } from '../ApiRequest/APIRequest';
+import Loader from '../Component/Loader';
 
 const HomePage = () => {
     let [newestList,setNewestList]=useState(null)
@@ -16,7 +17,7 @@ const HomePage = () => {
     return (
         <div>
             <Layout>
-                {newestList===null? <h1>hello</h1> :<BlogList newestList={newestList}></BlogList>}
+                {newestList===null? <Loader></Loader> :<BlogList newestList={newestList}></BlogList>}
             </Layout>
         </div>
     );
